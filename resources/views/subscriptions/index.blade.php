@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container mx-auto p-6">
-        <h2 class="text-blue-600 font-semibold text-2xl mb-4 text-center">Subscription Registration</h2>
+        <h1 class="text-3xl font-bold text-indigo-800 mb-4 text-center">Subscription Registration</h1>
 
         <!-- Subscription Form -->
         <div class="max-w-lg mx-auto bg-white p-6 rounded-lg shadow">

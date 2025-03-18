@@ -67,7 +67,8 @@ Route::middleware(['auth'])->group(function () {
 Route::get('/memberships', [SubscriptionController::class, 'membershipList'])->name('memberships.index');
 
 //memberships
-
+Route::middleware(['auth'])->group(function () {
 Route::get('/memberships', [MembershipController::class, 'index'])->name('memberships.index');
 Route::post('/subscriptions', [SubscriptionController::class, 'store'])->name('subscriptions.store');
+});
 

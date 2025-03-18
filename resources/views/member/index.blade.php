@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container mx-auto p-8">
-        <h1 class="text-3xl font-bold text-indigo-800 mb-4">Member List</h1>
+        <h1 class="text-3xl font-bold text-indigo-800 mb-4">Account List</h1>
 
         <!-- Search Bar -->
         <form method="GET" action="{{ route('members.index') }}" class="mb-4">
@@ -14,7 +14,7 @@
                 class="border border-indigo-500 px-4 py-2 rounded-md focus:ring focus:ring-indigo-300"
             />
             <button type="submit" class="ml-2 px-4 py-2 bg-indigo-500 text-white rounded-md hover:bg-indigo-600">
-                Search
+                Search Account
             </button>
         </form>
 

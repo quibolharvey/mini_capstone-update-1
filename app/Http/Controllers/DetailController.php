@@ -9,11 +9,22 @@ use Illuminate\Support\Facades\Log;
 class DetailController extends Controller
 {
     // Display subscription details
-    public function index()
-    {
-        $subscriptions = Subscription::all();
-        return view('details.index', compact('subscriptions'));
+    public function index(Request $request)
+{
+    $query = Subscription::query();
+
+    if ($request->has('search')) {
+        $search = $request->input('search');
+        $query->where('name', 'like', "%$search%")
+              ->orWhere('email', 'like', "%$search%")
+              ->orWhere('subscription_type', 'like', "%$search%");
     }
+
+    $subscriptions = $query->get();
+
+    return view('details.index', compact('subscriptions'));
+}
+
 
     // Update subscription status to "paid"
     public function updateStatus(Request $request, $id)

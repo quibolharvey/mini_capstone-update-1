@@ -2,13 +2,24 @@
 
 @section('content')
 <div class="container mx-auto p-6">
-    <h2 class="text-2xl font-semibold text-center text-blue-600">Subscription Details</h2>
+    <h1 class="text-3xl font-bold text-indigo-800 mb-4">Subscription Details</h1>
 
     @if(session('success'))
         <div class="bg-green-200 text-green-800 p-3 rounded-lg mb-4 text-center">
             {{ session('success') }}
         </div>
     @endif
+
+    <!-- Search Form -->
+    <form method="GET" action="{{ route('details.index') }}" class="mb-4 max-w-md">
+        <div class="flex items-center border rounded-lg overflow-hidden">
+            <input type="text" name="search" placeholder="Search subscriptions..."
+                   value="{{ request('search') }}"
+                   class="w-full p-2 outline-none border-none bg-gray-100"
+                   style="border: 1px solid #CBD5E0;" />
+            <button type="submit" class="bg-indigo-600 text-white px-4 py-2">Search</button>
+        </div>
+    </form>
 
     <table class="min-w-full bg-white shadow-md rounded-lg overflow-hidden mt-4">
         <thead>
@@ -69,8 +80,6 @@
                         </span>
                     @endrole
                 </td>
-
-
             </tr>
             @endforeach
         </tbody>
