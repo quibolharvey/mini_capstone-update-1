@@ -6,16 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     @vite('resources/css/app.css')
-    <title>Document</title>
+    <title>BicepCurlFit</title>
 </head>
 
-<body class="flex h-screen w-screen bg-gray-100 text-gray-900">
+<body class="flex flex-col min-h-screen bg-gray-100 text-gray-900">
 
-    <!-- Sidebar -->
+    <!-- Navbar -->
     @include('components.sidebar')
 
     <!-- Main Content Area -->
-    <div class="flex-1 p-8 bg-white shadow-md rounded-lg overflow-auto">
+    <div class="flex flex-1 justify-center bg-sky-100 shadow-md rounded-lg overflow-auto">
         @yield('content')
     </div>
 

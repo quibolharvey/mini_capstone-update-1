@@ -2,10 +2,10 @@
 
 @section('content')
     <div class="container mx-auto p-6">
-        <h1 class="text-3xl font-bold text-indigo-800 mb-4 text-center">Subscription Registration</h1>
+        <h1 class="text-3xl font-bold text-gray-700 mb-4 text-center">Subscription Registration</h1>
 
         <!-- Subscription Form -->
-        <div class="max-w-lg mx-auto bg-white p-6 rounded-lg shadow">
+        <div class="max-w-lg mx-auto bg-sky-100 p-6 rounded-lg shadow">
             <form action="{{ route('subscriptions.store') }}" method="POST">
                 @csrf
 
@@ -39,14 +39,14 @@
                 <div class="mb-4">
                     <label for="start_date" class="block text-gray-700 font-semibold">Start Date</label>
                     <input type="date" id="start_date" name="start_date" required readonly
-                        class="w-full px-4 py-2 border rounded-lg bg-gray-100 cursor-not-allowed">
+                        class="w-full px-4 py-2 border rounded-lg bg-sky-100 cursor-not-allowed">
                 </div>
 
                 <!-- End Date -->
                 <div class="mb-4">
                     <label for="end_date" class="block text-gray-700 font-semibold">End Date</label>
                     <input type="date" id="end_date" name="end_date" required readonly
-                        class="w-full px-4 py-2 border rounded-lg bg-gray-100 cursor-not-allowed">
+                        class="w-full px-4 py-2 border rounded-lg bg-sky-100 cursor-not-allowed">
                 </div>
 
                 <!-- Apply for Membership Checkbox -->
@@ -64,7 +64,7 @@
                 <!-- Submit Button -->
                 <div class="mt-4">
                     <button type="submit"
-                        class="w-full bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg transition-all">
+                        class="w-full bg-sky-200 hover:bg-sky-300 hover:text-blue-900 text-gray px-4 py-2 rounded-lg transition-all">
                         Register Subscription
                     </button>
                 </div>
@@ -111,7 +111,7 @@
             width: 18px;
             height: 18px;
             text-align: center;
-            background-color: #007bff;
+            background-color: skyblue;
             color: white;
             line-height: 18px;
             margin-left: 5px;

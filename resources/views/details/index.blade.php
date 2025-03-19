@@ -1,11 +1,11 @@
 @extends('layout.layout')
 
 @section('content')
-<div class="container mx-auto p-6">
-    <h1 class="text-3xl font-bold text-indigo-800 mb-4">Subscription Details</h1>
+<div class="h-screen flex flex-col w-100% gap-6 bg-gradient-to-br bg-sky-100 container mx-auto p-1">
+    <h1 class="text-3xl font-bold text-gray-700 mb-4">Subscription Details</h1>
 
     @if(session('success'))
-        <div class="bg-green-200 text-green-800 p-3 rounded-lg mb-4 text-center">
+        <div class="bg-sky-200 text-blue-900 p-3 rounded-lg mb-4 text-center">
             {{ session('success') }}
         </div>
     @endif
@@ -15,15 +15,15 @@
         <div class="flex items-center border rounded-lg overflow-hidden">
             <input type="text" name="search" placeholder="Search subscriptions..."
                    value="{{ request('search') }}"
-                   class="w-full p-2 outline-none border-none bg-gray-100"
+                   class="w-full p-2 outline-none border-none bg-sky-100"
                    style="border: 1px solid #CBD5E0;" />
-            <button type="submit" class="bg-indigo-600 text-white px-4 py-2">Search</button>
+            <button type="submit" class="bg-sky-200 hover:bg-sky-300 hover:text-blue-900 text-gray px-4 py-2">Search</button>
         </div>
     </form>
 
-    <table class="min-w-full bg-white shadow-md rounded-lg overflow-hidden mt-4">
+    <table class="min-w-full bg-sky-100 shadow-md rounded-lg overflow-hidden mt-4">
         <thead>
-            <tr class="bg-gray-200 text-gray-700">
+            <tr class="bg-sky-200 text-gray-700">
                 <th class="px-4 py-2">Name</th>
                 <th class="px-4 py-2">Email</th>
                 <th class="px-4 py-2">Subscription</th>
@@ -48,7 +48,7 @@
                 <td class="px-4 py-2">₱{{ number_format($sub->total_payment, 2) }}</td>
                 <td class="px-4 py-2">
                     <span class="px-2 py-1 text-xs font-semibold rounded
-                        {{ $sub->membership ? 'bg-green-200 text-green-700' : 'bg-gray-200 text-gray-700' }}">
+                        {{ $sub->membership ? 'bg-green-200 text-green-700' : 'bg-sky-100 text-gray-700' }}">
                         {{ $sub->membership ? 'Applied' : 'None' }}
                     </span>
                 </td>

@@ -2,21 +2,21 @@
 
 @section('content')
     <div class="container mx-auto p-6">
-        <h1 class="text-3xl font-bold text-indigo-800 mb-4">Membership List</h1>
+        <h1 class="text-3xl font-bold text-gray-700 mb-4">Membership List</h1>
 
         <!-- Search Form -->
         <form method="GET" action="{{ route('memberships.index') }}" class="mb-4 w-full max-w-md">
             <div class="flex items-center border rounded-lg overflow-hidden">
                 <input type="text" name="search" placeholder="Search members..."
                        value="{{ request('search') }}"
-                       class="w-full p-2 outline-none border-none rounded-l-lg bg-gray-100"
+                       class="w-full p-2 outline-none border-none rounded-l-lg bg-sky-100"
                        style="border: 1px solid #CBD5E0;" />
-                <button type="submit"class="bg-indigo-600 text-white px-4 py-2 rounded-r-lg">Search</button>
+                <button type="submit"class="bg-sky-200 hover:bg-sky-300 hover:text-blue-900 text-gray px-4 py-2 rounded-r-lg">Search</button>
             </div>
         </form>
 
         <!-- Membership List -->
-        <div class="w-full max-w-md bg-white rounded-lg shadow-lg overflow-hidden">
+        <div class="w-full max-w-md bg-sky-100 rounded-lg shadow-lg overflow-hidden">
             <ul class="divide-y divide-gray-200">
                 @forelse ($members as $member)
                     <li class="px-4 py-3">
