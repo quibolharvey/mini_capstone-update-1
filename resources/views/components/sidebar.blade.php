@@ -40,7 +40,7 @@
             <form action="{{ route('logout') }}" method="POST">
                 @csrf
                 <button type="submit"
-                    class="text-lg px-3 py-2 rounded-md transition {{ request()->routeIs('logout') ? 'bg-sky-200 text-gray-900' : 'hover:bg-sky-200 hover:text-blue-900'  }}">
+                    class="text-lg px-3 py-2 rounded-md transition text-red-900 {{ request()->routeIs('logout') ? 'bg-sky-200 text-gray-900' : 'hover:bg-red-200 hover:text-red-900'  }}">
                     Logout
                 </button>
             </form>
@@ -50,8 +50,11 @@
                 Login
             </a>
         @endif
+        @php
+         use Illuminate\Support\Str;   
+        @endphp
 
         <!-- User Display -->
-        <p class="text-lg text-gray-900 hidden sm:block">{{ auth()->check() ? auth()->user()->name : 'Guest' }}</p>
+        <p class="text-lg text-gray-900 hidden sm:block">{{ auth()->check() ? Str::upper(auth()->user()->name) : Str::upper('Guest') }}</p>
     </div>
 </div>

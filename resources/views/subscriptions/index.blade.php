@@ -1,7 +1,7 @@
 @extends('layout.layout')
 
 @section('content')
-    <div class="container mx-auto p-6">
+    <div class="container mx-auto p-1">
         <h1 class="text-3xl font-bold text-gray-700 mb-4 text-center">Subscription Registration</h1>
 
         <!-- Subscription Form -->

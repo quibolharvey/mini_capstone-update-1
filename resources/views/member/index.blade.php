@@ -1,8 +1,8 @@
 @extends('layout.layout')
 
 @section('content')
-    <div class="container mx-auto p-8">
-        <h1 class="text-3xl font-bold text-gray-700 mb-4">Account List</h1>
+    <div class="container mx-auto p-1 flex flex-col items-center">
+        <h1 class="text-3xl font-bold text-gray-700 mb-4 text-center">Account List</h1>
 
         <!-- Search Bar -->
         <form method="GET" action="{{ route('members.index') }}" class="mb-4">
@@ -11,9 +11,10 @@
                 name="search" 
                 placeholder="Search by name..."
                 value="{{ request('search') }}"
+                style="border: 1px solid"
                 class="border border-sky-200 px-4 py-2 rounded-md focus:ring focus:ring-sky-200"
             />
-            <button type="submit" class="ml-2 px-4 py-2 bg-sky-200 text-gray-900 rounded-md hover:bg-sky-300 hover:text-blue-900">
+            <button type="submit" class="items-center text-center ml-2 px-4 py-2 bg-sky-200 text-gray-900 rounded-md hover:bg-sky-300 hover:text-blue-900">
                 Search Account
             </button>
         </form>

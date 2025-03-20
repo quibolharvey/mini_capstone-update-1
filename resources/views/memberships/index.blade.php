@@ -1,12 +1,12 @@
 @extends('layout.layout')
 
 @section('content')
-    <div class="container mx-auto p-6">
-        <h1 class="text-3xl font-bold text-gray-700 mb-4">Membership List</h1>
+    <div class="container mx-auto p-1 flex flex-col items-center">
+        <h1 class="text-3xl font-bold text-gray-700 mb-4 text-center">Membership List</h1>
 
         <!-- Search Form -->
-        <form method="GET" action="{{ route('memberships.index') }}" class="mb-4 w-full max-w-md">
-            <div class="flex items-center border rounded-lg overflow-hidden">
+        <form method="GET" action="{{ route('memberships.index') }}" class="max-w-md justify-center mx-auto">
+            <div class="flex items-center border rounded-lg overflow-hidden mb-5">
                 <input type="text" name="search" placeholder="Search members..."
                        value="{{ request('search') }}"
                        class="w-full p-2 outline-none border-none rounded-l-lg bg-sky-100"
@@ -21,10 +21,16 @@
                 @forelse ($members as $member)
                     <li class="px-4 py-3">
                         <div class="flex items-center justify-between">
+                            <table>
                             <div class="flex items-center">
+                                <tr>
                                 <span class="font-semibold">{{ $member->name }}</span>
+                            </tr>
+                            <tr>
                                 <span class="text-gray-600 ml-2">({{ $member->email }})</span>
+                            </tr>
                             </div>
+                        </table>
                         </div>
                     </li>
                 @empty

@@ -68,7 +68,7 @@ Route::get('/memberships', [SubscriptionController::class, 'membershipList'])->n
 
 //memberships
 Route::middleware(['auth'])->group(function () {
-Route::get('/memberships', [MembershipController::class, 'index'])->name('memberships.index');
-Route::post('/subscriptions', [SubscriptionController::class, 'store'])->name('subscriptions.store');
+    Route::get('/memberships', [MembershipController::class, 'index'])->name('memberships.index');
+    Route::post('/subscriptions', [SubscriptionController::class, 'store'])->name('subscriptions.store');
 });
 

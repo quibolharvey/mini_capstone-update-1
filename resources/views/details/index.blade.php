@@ -1,7 +1,7 @@
 @extends('layout.layout')
 
 @section('content')
-<div class="h-screen flex flex-col w-100% gap-6 bg-gradient-to-br bg-sky-100 container mx-auto p-1">
+<div class="h-screen text-center flex flex-col w-100% gap- bg-gradient-to-br bg-sky-100 container mx-auto p-1">
     <h1 class="text-3xl font-bold text-gray-700 mb-4">Subscription Details</h1>
 
     @if(session('success'))
@@ -11,7 +11,7 @@
     @endif
 
     <!-- Search Form -->
-    <form method="GET" action="{{ route('details.index') }}" class="mb-4 max-w-md">
+    <form method="GET" action="{{ route('details.index') }}" class="max-w-md justify-center mx-auto">
         <div class="flex items-center border rounded-lg overflow-hidden">
             <input type="text" name="search" placeholder="Search subscriptions..."
                    value="{{ request('search') }}"

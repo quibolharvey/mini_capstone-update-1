@@ -1,7 +1,7 @@
 @extends('layout.layout')
 
 @section('content')
-    <div class="h-screen flex flex-col w-full justify-center items-center gap-6 bg-gradient-to-br bg-sky-100 text-black-800">
+    <div class="h-screen flex flex-col w-full p-35 items-center gap-6 bg-gradient-to-br bg-sky-100 text-black-800">
         <div class="text-center backdrop-blur-md bg-white/10 p-6 rounded-2xl shadow-lg">
             <h1 class="text-8xl font-extrabold tracking-wide animate-fade-in">
                 BicepCurl Fit 💪

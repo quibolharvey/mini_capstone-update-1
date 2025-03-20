@@ -1,7 +1,7 @@
 @extends('layout.layout')
 
 @section('content')
-    <div class="min-h-screen w-full flex items-center justify-center bg-gradient-to-br bg-sky-100">
+    <div class="min-h-screen w-full items-center mx-auto p-10 flex flex-col bg-gradient-to-br bg-sky-100">
         <form class="flex flex-col bg-white/10 backdrop-blur-lg p-8 rounded-2xl shadow-2xl w-full max-w-md space-y-6 border border-white/20"
             action="{{ route('signin') }}" method="POST">
             @csrf
