@@ -1,7 +1,7 @@
 <div class="flex flex-row h-35 w-full bg-sky-100 justify-between items-center px-6 text-gray-900">
     <!-- Brand Logo and Name -->
     <a href="{{ route('home') }}" class="flex items-center gap-2 text-3xl font-bold text-gray-700">
-        <img src="{{ asset('images/logo.png') }}" alt="BicepCurl Logo" class="h-10 w-10"> 
+        <img src="{{ asset('images/logo.png') }}" alt="BicepCurl Logo" class="h-10 w-10">
         BICEPCURL
     </a>
 
@@ -51,7 +51,7 @@
             </a>
         @endif
         @php
-         use Illuminate\Support\Str;   
+         use Illuminate\Support\Str;
         @endphp
 
         <!-- User Display -->
