@@ -16,13 +16,13 @@
             class="text-lg transition px-3 py-2 rounded-md {{ request()->routeIs('members.index') ? 'bg-sky-200 text-gray-900' : 'hover:bg-sky-200 hover:text-blue-900'  }}">
             Account List
         </a>
-        @endrole
+        
 
         <a href="{{ route('memberships.index') }}"
             class="text-lg px-3 py-2 rounded-md transition {{ request()->routeIs('memberships.index') ? 'bg-sky-200 text-gray-900' : 'hover:bg-sky-200 hover:text-blue-900'  }}">
             Membership List
         </a>
-
+        @endrole
         <a href="{{ route('subs.index') }}"
             class="text-lg transition px-3 py-2 rounded-md {{ request()->routeIs('subs.index') ? 'bg-sky-200 text-gray-900' : 'hover:bg-sky-200 hover:text-blue-900'  }}">
             Subscription Registration

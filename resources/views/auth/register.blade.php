@@ -41,7 +41,8 @@
         </button>
 
         <div class="text-center">
-            <a href="{{ route('login') }}" class="text-cyan-300 hover:underline">Already have an account?</a>
+            <a class="text-gray-600">Already have an account?</a>
+            <a href="{{ route('login') }}" class="text-cyan-300 hover:underline">Login here</a>
         </div>
 
         @if (session('error'))
