@@ -15,7 +15,7 @@ class MemberController extends Controller
         $query->where('name', 'like', '%' . $request->search . '%');
     }
 
-    $members = $query->paginate(10);
+    $members = $query->paginate(5);
 
     return view('member.index', compact('members'));
 }
